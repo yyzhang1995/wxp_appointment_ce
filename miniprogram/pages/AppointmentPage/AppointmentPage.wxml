@@ -1,0 +1,37 @@
+<!--miniprogram/pages/AppointmentPage/AppointmentPage.wxml-->
+<!-- <text>miniprogram/pages/AppointmentPage/AppointmentPage.wxml</text> -->
+<view>
+  <view style="margin-bottom:15rpx;">
+    <text style="margin-left:15rpx;text-decoration:underline;font-size:25rpx">请选择预约日期：</text>
+    <view class='chooseday' style="margin-top:5rpx;background-color:white;">
+      <button id = '{{day1}}' bindtap="onChooseDay" style='{{type1}}' class='choosedaybutton'>{{day1}}</button>
+      <button id = '{{day2}}' bindtap="onChooseDay" style="{{type2}}" class='choosedaybutton'>{{day2}}</button>
+      <button id = '{{day3}}' bindtap="onChooseDay" style="{{type3}}" class='choosedaybutton'>{{day3}}</button>
+    </view>
+  </view>
+
+  <view wx:if="{{zone.length>0}}"> 
+    <text style="margin-left:15rpx;text-decoration:underline;font-size:25rpx" >请选择预约时间段(可多选)：</text>
+    <view class="choosetimebox" style="margin-top:5rpx;background-color:white;"
+      bind:touchstart='ontouch'
+      bind:touchmove='movetouch'
+      bind:touchend='endtouch'>
+      <view wx:for="{{zone}}" class="buttongroups">
+        <button 
+          id='{{item.id}}' 
+          bindtap="onChooseTime" 
+          style="{{item.type}}" 
+          disabled="{{item.disabled}}" 
+          class="choosetimebutton">{{item.interval}}\n剩余：{{item.num}}
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <view style="margin-top:15rpx;">
+    <text style="margin-left:15rpx;text-decoration:underline;font-size:25rpx">*使用人：</text>
+    <input class = 'appointmentname' bindinput="getInputValue"></input>
+  </view>
+
+  <button bindtap='submit' class="submitbutton">提交</button>
+</view>

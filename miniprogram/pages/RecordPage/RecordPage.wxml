@@ -1,0 +1,23 @@
+<!--miniprogram/pages/RecordPage/RecordPage.wxml-->
+<!-- <text>miniprogram/pages/RecordPage/RecordPage.wxml</text> -->
+
+<view>
+  <text style="margin-left:15rpx;font-size:30rpx">预约信息：</text>
+  <view wx:if="{{record.length==0}}">
+    <button disabled="true" style="width=100%;background-color:white;">暂无有效预约信息</button>
+  </view>
+  <view style="background-color:white">
+    <view wx:for="{{record}}">
+      <view class='recordview'>
+        <view class="recordbox">
+          <text style="font-weight:bold;font-size:30rpx;text-decoration:underline">时间：</text>
+          <text class="recordcontent">{{item.time}}</text>
+        </view>
+        <view class="recordbox">
+          <text style="font-weight:bold;font-size:30rpx;text-decoration:underline">使用人：</text>
+          <text class="recordcontent">{{item.name}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

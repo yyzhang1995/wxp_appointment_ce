@@ -1,0 +1,65 @@
+/* miniprogram/pages/AppointmentPage/AppointmentPage.wxss */
+
+.chooseday{
+  display: flex;
+  height: 100rpx;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.choosedaybutton{
+  font-size: 25rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 30%;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 0rpx;
+}
+
+.choosetimebox{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+}
+
+.buttongroups{
+  width: 30%;
+  margin-bottom: 5rpx;
+  margin-top: 5rpx;
+}
+
+.choosetimebutton{
+  font-size: 25rpx;
+  line-height: 38rpx;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+  white-space: pre-line;
+  background-color: white;
+  border-radius: 0rpx;
+}
+
+.appointmentname{
+  background-color: white;
+  margin-top: 5rpx;
+  font-size: 30rpx;
+  height: 80rpx;
+  padding-left: 15rpx;
+}
+
+.submitbutton{
+  font-size: 40rpx;
+  vertical-align: middle;
+  text-align: center;
+  width: 95%;
+  line-height : 80rpx;
+  background-color: hsla(216, 93%, 47%, 0.733);
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+  color : white;
+
+}

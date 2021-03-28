@@ -1,0 +1,51 @@
+/* miniprogram/pages/WelcomePage/WelcomePage.wxss */
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.helptext{
+  margin-top: 50rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+
+.buttonview {
+  position: absolute;
+  bottom : 200rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.functionbutton {
+  width: 250rpx;
+  background-color:white;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+
+.appointmentbutton {
+  width: 250rpx;
+  background-color: hsla(216, 93%, 47%, 0.733);
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  color: white;
+}
+
+.otherbuttonview{
+  position: absolute;
+  bottom: 50rpx;
+  width : 100%;
+}
+
+.otherbutton{
+  font-size : 30rpx;
+  text-decoration: underline;
+  background-color: transparent;
+  color: gray;
+  height: 40rpx;
+  line-height: 40rpx;
+}

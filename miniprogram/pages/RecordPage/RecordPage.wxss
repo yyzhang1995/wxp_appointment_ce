@@ -1,0 +1,26 @@
+/* miniprogram/pages/RecordPage/RecordPage.wxss */
+
+.recordview{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 5rpx;
+  margin-top: 5rpx;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  border-top : none;
+}
+
+.recordbox{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border:1px;
+  position: relative;
+  margin-left: 15rpx;
+}
+
+.recordcontent{
+  margin-right: 30rpx;
+  font-size : 30rpx
+}

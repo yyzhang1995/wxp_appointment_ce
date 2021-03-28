@@ -1,0 +1,24 @@
+<!--miniprogram/FeedbackPage/FeedbackPage.wxml-->
+<!-- <text>miniprogram/FeedbackPage/FeedbackPage.wxml</text> -->
+
+<view>
+  <form bindsubmit="submitopinion">
+    <view class='subview'>
+      <text style="margin-left:25rpx;font-size:30rpx">*主题</text>
+      <input class='subinput' placeholder="请输入反馈主题" value="{{subject}}" bindblur="subblur"></input>
+    </view>
+    <view class='opinionview'>
+      <text style="margin-left:25rpx;font-size:30rpx">*反馈意见</text>
+      <view class="textareaview">
+        <textarea 
+          class="opinioninput" 
+          placeholder="请输入反馈意见" 
+          placeholder-style="line-height:40rpx;font-size:30rpx;"
+          maxlength="-1" 
+          value="{{opinion}}" 
+          bindblur="opinionblur"></textarea>
+      </view>
+    </view>
+    <button class='submitbutton' form-type="submit">提交反馈</button>
+  </form>
+</view>

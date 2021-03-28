@@ -1,0 +1,34 @@
+<!--miniprogram/pages/ManagePage/ManagePage.wxml-->
+<!-- <text>miniprogram/pages/ManagePage/ManagePage.wxml</text> -->
+
+<view>
+  <view class='buttonview'>
+    <button bindtap='appointment' class='appointmentbutton'>预约</button>
+    <button bindtap='onTotal' class="topbutton">查看预约</button>
+  </view>
+  <view>
+    <view style="margin-bottom:5rpx"><text style="margin-left:15rpx;font-size:30rpx;">我的预约：</text> </view>
+    <view wx:if="{{inoverdue.length==0}}">
+      <button disabled="true" style="width=100%;background-color:white;">尚无有效预约</button>
+    </view>
+    <view wx:for="{{inoverdue}}">
+      <view class="inoverdueitem">
+        <text class='labeltext'>{{item.content}}</text>
+        <button id="{{item.id}}" bindtap="onCancel" class="cancelbutton">取消</button>
+      </view>
+    </view>
+  </view>
+  <view style="margin-top:15rpx">
+    <view style="margin-bottom:5rpx"><text style="margin-left:15rpx;font-size:30rpx;">已过期预约：</text></view>
+    <view wx:if="{{overdue.length==0}}">
+      <button disabled="true" style="width=100%;background-color:white;">尚无过期预约</button>
+    </view>
+    <label wx:for="{{overdue}}">
+      <view>
+        <button id="{{item.content}}" disabled="true" class="overduebutton">
+          {{item.content}} 不可取消
+        </button>
+      </view>
+    </label>
+  </view>
+</view>

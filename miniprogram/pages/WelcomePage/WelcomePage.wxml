@@ -1,0 +1,38 @@
+<!--miniprogram/pages/WelcomePage/WelcomePage.wxml-->
+<!-- <text>miniprogram/pages/WelcomePage/WelcomePage.wxml</text> -->
+<view>
+  <view>
+    <view class='userinfo'>
+      <button
+        class = 'logginbutton'
+        bindtap="getUserInfo"
+        size = 'default'
+      >{{logwords}}</button>
+    </view>
+  </view>
+  <view class='helptext'>
+    <text >
+      操作指南：
+      1. 点击登录按钮进行登录（该步骤仅获取用户对应的openid，不获取任何个人信息，请放心使用），在未登录的情况下，无法使用预约和管理功能。
+      2. 点击预约按钮进行预约。
+      3. 点击管理按钮对当前账号的预约内容进行查看或取消，并可以查看三天内所有的预约。
+      4. 点击退出登录以退出当前登录状态
+    </text>
+  </view>
+  <view class='buttonview'>
+    <view>
+      <button bindtap='appointment' class="appointmentbutton">预约</button>
+    </view>
+    <view>
+      <button bindtap='manage' class="functionbutton">管理</button>
+    </view>
+    <view>
+      <button bindtap='development' hidden="true">开发</button>
+    </view>
+  </view>
+
+  <view class='otherbuttonview'>
+    <button class='otherbutton' bindtap="onlogout">退出登录</button>
+    <button class='otherbutton' bindtap="onfeedback">我要吐槽</button>
+  </view>
+</view>
