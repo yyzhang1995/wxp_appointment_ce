@@ -11,9 +11,15 @@ exports.main = async(event, option) => {
   const db = cloud.database()
 
   if (event.option == 'user'){
+    const countresult = await db.collection(event.databasename).where({
+      openid : event.openid
+    }).count()
+    const total = countresult.total
+    var skipnumber = total - 100
+    if (skipnumber < 0) skipnumber = 0
     return await db.collection(event.databasename).where({
       openid : event.openid
-    }).get({
+    }).skip(skipnumber).get({
       success : res =>{
         return res
       } 

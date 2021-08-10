@@ -122,6 +122,11 @@ Page({
     return date.getTime()
   },
 
+  // 合并连续的预约时间段
+  _mergeIndex(queryData){
+
+  },
+
   // 获取今天的日期
   getDateStringFromTime(time){
     var date = new Date(time)
